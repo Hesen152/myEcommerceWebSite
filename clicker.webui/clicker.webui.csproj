@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>   
+   <ProjectReference Include="..\clicker.data\clicker.data.csproj" />
+    <ProjectReference Include="..\clicker.business\clicker.business.csproj" />
+    <ProjectReference Include="..\clicker.entity\clicker.entity.csproj" />
+</ItemGroup>
+
+
+<ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.6"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.6"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.6"/>
+</ItemGroup>
+
+
+
+
+
+</Project>

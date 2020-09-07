@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+<ItemGroup>
+    <ProjectReference Include="..\clicker.entity\clicker.entity.csproj" />
+</ItemGroup>
+
+<ItemGroup>
+    <ProjectReference Include="..\clicker.data\clicker.data.csproj" />
+</ItemGroup>
+</Project>

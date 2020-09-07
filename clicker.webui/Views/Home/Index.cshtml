@@ -1,0 +1,25 @@
+@model clicker.webui.Models.ProductViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+@* <div id="navigation">
+		<!-- container -->
+		<div class="container">
+			<div id="responsive-nav">
+
+                       @await Component.InvokeAsync("Categories") 
+
+
+			</div>
+		</div>
+</div> *@          
+                @await Component.InvokeAsync("Categories")
+	              <partial name="_home">   
+	              <partial name="_section1">   
+	              <partial name="_section2">   
+	              <partial name="_section3">   
+	              <partial name="_section4">   
+	             
+
+	         
+
