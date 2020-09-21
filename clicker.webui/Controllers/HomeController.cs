@@ -16,7 +16,7 @@ namespace clicker.webui.Controllers
         
          public IActionResult Index()
          {
-           var productViewModel=new ProductViewModel(){
+           var productViewModel=new ProductListViewModel(){
                Products=_productService.GetAll()
            };
 

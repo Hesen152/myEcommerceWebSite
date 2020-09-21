@@ -17,7 +17,17 @@ namespace clicker.business.Concrete
 
         public void Create(Category entity)
         {
-            throw new System.NotImplementedException();
+         _categoryRepository.Create(entity);
+        }
+
+        public void Delete(Category entity)
+        {
+           _categoryRepository.Delete(entity);
+        }
+
+        public void DeleteFromCategory(int categoryId, int productId)
+        {
+           _categoryRepository.DeleteFromCategory(categoryId,productId);
         }
 
         public List<Category> GetAll()
@@ -28,13 +38,15 @@ namespace clicker.business.Concrete
 
         public Category GetById(int Id)
         {
-            throw new System.NotImplementedException();
+           return _categoryRepository.GetById(Id);
         }
 
-        public void Remove(Category entity)
+        public Category GetByIdWithProducts(int categoryId)
         {
-            throw new System.NotImplementedException();
+            return  _categoryRepository.GetByIdWithProducts(categoryId);
         }
+
+      
 
         public void Update(Category entity)
         {

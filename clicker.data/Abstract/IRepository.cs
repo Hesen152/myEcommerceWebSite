@@ -5,7 +5,7 @@ namespace clicker.data.Abstract
     public interface IRepository<T>
     {
 
-        T GetTById(int Id);
+        T GetById(int Id);
         List<T> GetAll();
 
         void Update(T entity);

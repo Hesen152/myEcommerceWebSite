@@ -36,7 +36,7 @@ namespace clicker.data.Concrete.EfCore
             }
         }
 
-        public TEntity GetTById(int Id)
+        public TEntity GetById(int Id)
         {
             using (var context=new ClickerContext())
             {

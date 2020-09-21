@@ -3,7 +3,7 @@ using clicker.entity;
 
 namespace clicker.business.Abstract
 {
-    public interface ICategoryService:IValidator<Category>
+    public interface ICategoryService:IValid<Category>
     {
              Category GetById(int Id);
 
@@ -14,8 +14,9 @@ namespace clicker.business.Abstract
 
              void Update(Category entity);
 
-             void Remove(Category entity);
+             void Delete(Category entity);
+             Category GetByIdWithProducts(int categoryId);
 
-
+             void DeleteFromCategory(int categoryId,int productId);
     }
 }

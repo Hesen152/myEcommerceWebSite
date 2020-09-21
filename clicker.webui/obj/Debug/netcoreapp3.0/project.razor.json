@@ -10192,6 +10192,11 @@
   "RootNamespace": "clicker.webui",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\CreateProduct.cshtml",
+      "TargetPath": "Views\\Admin\\CreateProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_header.cshtml",
       "TargetPath": "Views\\Shared\\_header.cshtml",
       "FileKind": "mvc"
@@ -10217,13 +10222,33 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_navigation.cshtml",
-      "TargetPath": "Views\\Shared\\_navigation.cshtml",
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Account\\EmailConfirm.cshtml",
+      "TargetPath": "Views\\Account\\EmailConfirm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\EditCategory.cshtml",
+      "TargetPath": "Views\\Admin\\EditCategory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_LayoutAdmin.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutAdmin.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_product.cshtml",
       "TargetPath": "Views\\Shared\\_product.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\UserList.cshtml",
+      "TargetPath": "Views\\Admin\\UserList.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Account\\Login.cshtml",
+      "TargetPath": "Views\\Account\\Login.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -10237,8 +10262,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Account\\PasswordReset.cshtml",
+      "TargetPath": "Views\\Account\\PasswordReset.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Trading\\Details.cshtml",
+      "TargetPath": "Views\\Trading\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\ProductList.cshtml",
+      "TargetPath": "Views\\Admin\\ProductList.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_section2.cshtml",
       "TargetPath": "Views\\Shared\\_section2.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\EditProduct.cshtml",
+      "TargetPath": "Views\\Admin\\EditProduct.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -10247,8 +10292,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_menu-nav.cshtml",
+      "TargetPath": "Views\\Shared\\_menu-nav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\Index.cshtml",
+      "TargetPath": "Views\\Admin\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_section3.cshtml",
       "TargetPath": "Views\\Shared\\_section3.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\CategoryList.cshtml",
+      "TargetPath": "Views\\Admin\\CategoryList.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Account\\ForgotPassword.cshtml",
+      "TargetPath": "Views\\Account\\ForgotPassword.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -10257,8 +10322,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Trading\\SearchAny.cshtml",
+      "TargetPath": "Views\\Trading\\SearchAny.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\CreateCategory.cshtml",
+      "TargetPath": "Views\\Admin\\CreateCategory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Account\\Register.cshtml",
+      "TargetPath": "Views\\Account\\Register.cshtml",
       "FileKind": "mvc"
     }
   ],

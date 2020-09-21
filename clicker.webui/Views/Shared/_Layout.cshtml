@@ -1,35 +1,37 @@
-v<html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-     <link rel="stylesheet" href="/modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
-        @RenderSection("Css",false)
+	     <link rel="stylesheet" href="~/login.css" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="~/modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
+         @RenderSection("Csss",false) 
 
 	<title>E-SHOP HTML Template</title>
 
     	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
 
-    	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    	<link type="text/css" rel="stylesheet" href="~/css/bootstrap.min.css" />
 
-    <link type="text/css" rel="stylesheet" href="css/slick.css" />
-	<link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+    <link type="text/css" rel="stylesheet" href="~/css/slick.css" />
+	<link type="text/css" rel="stylesheet" href="~/css/slick-theme.css" />
 
 	<!-- nouislider -->
-	<link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+	<link type="text/css" rel="stylesheet" href="~/css/nouislider.min.css" />
 
 	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="~/css/font-awesome.min.css">
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="~/css/style.css" />
 
 </head>
 
 <style>
 </style>
 <body>
-          @* @await Html.PartialAsync("_navbar") *@
+       
          
 
 @* 
@@ -46,14 +48,29 @@ v<html lang="en">
    <footer class="py-5 bg-dark text-white text-center">
        ShopApp App/2020
    </footer> *@
+   
 
        @await  Html.PartialAsync("_header")
+	   <div id="navigation">
+		<!-- container -->
+		<div class="container">
+			<div id="responsive-nav">
+		 @* <span class="category-header">Categories <i class="fa fa-list"></i></span> *@
+
+            @RenderSection("Categories",false)
+            @await Html.PartialAsync("_menu-nav")
+              
+
+				</div>
+
+				</div>
+
+	   </div>
+
+     @RenderBody()
 
 
- 
-
-
-            @RenderBody()
+        
 
 
 <footer id="footer" class="section section-grey">
@@ -151,13 +168,16 @@ v<html lang="en">
 		</div>
 		<!-- /container -->
 	</footer>
-<
-    <script src="js/jquery.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/slick.min.js"></script>
-	<script src="/js/nouislider.min.js"></script>
-	<script src="/js/jquery.zoom.min.js"></script>
-	<script src="/js/main.js"></script>
+
+    <script src="~/js/jquery.min.js"></script>
+	<script src="~/js/bootstrap.min.js"></script>
+	<script src="~/js/slick.min.js"></script>
+	<script src="~/js/nouislider.min.js"></script>
+	<script src="~/js/jquery.zoom.min.js"></script>
+	<script src="~/js/main.js"></script>
+   @RenderSection("Scripts",false)
+
+
 
 </body>
 </html>

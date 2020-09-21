@@ -421,6 +421,9 @@
         }
       },
       "clicker.entity/1.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "runtime": {
           "clicker.entity.dll": {}
         }
