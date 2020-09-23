@@ -10,7 +10,7 @@
 						<li><a href="#">Store</a></li>
 						<li><a href="#">Newsletter</a></li>
 						<li><a href="#">FAQ</a></li>
-						<li class="dropdown default-dropdown">
+						@* <li class="dropdown default-dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">ENG <i class="fa fa-caret-down"></i></a>
 							<ul class="custom-menu">
 								<li><a href="#">English (ENG)</a></li>
@@ -18,14 +18,15 @@
 								<li><a href="#">French (FR)</a></li>
 								<li><a href="#">Spanish (Es)</a></li>
 							</ul>
-						</li>
-						<li class="dropdown default-dropdown">
+						</li> *@
+						@* <li class="dropdown default-dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">USD <i class="fa fa-caret-down"></i></a>
 							<ul class="custom-menu">
 								<li><a href="#">USD ($)</a></li>
 								<li><a href="#">EUR (€)</a></li>
 							</ul>
-						</li>
+						</li> *@
+
 					</ul>
 				</div>
 			</div>
@@ -61,14 +62,17 @@
 				<div class="pull-right">
 					<ul class="header-btns">
 						<!-- Account -->
-						<li class="header-account dropdown default-dropdown">
+						<li class="header-account dropdown default-dropdown"  style="margin-bottom:9px">
 							<div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
-								<div class="header-btns-icon">
+								<div class="header-btns-icon" >
 									<i class="fa fa-user-o"></i>
-								</div>
-								<strong class="text-uppercase">My Account <i class="fa fa-caret-down"></i></strong>
+							
+								</div>		
+								<a href="/account/manage">
+						     @User.Identity.Name
+						         </a>														
 							</div>
-							<a href="/account/login" class="text-uppercase">Login</a> / <a  href="/account/register" class="text-uppercase">Register</a>
+							<a href="/account/login" class="text-uppercase" >Login</a>/<a href="/account/register" class="text-uppercase">Register</a>
 							<ul class="custom-menu">
 								<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
 								<li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist</a></li>
@@ -81,7 +85,7 @@
 						<!-- /Account -->
 
 						<!-- Cart -->
-						<li class="header-cart dropdown default-dropdown">
+						<li class="header-cart dropdown default-dropdown" style="padding-left:40px">
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 								<div class="header-btns-icon">
 									<i class="fa fa-shopping-cart"></i>
@@ -91,6 +95,8 @@
 								<br>
 								<span>35.20$</span>
 							</a>
+
+
 							<div class="custom-menu">
 								<div id="shopping-cart">
 									<div class="shopping-cart-list">
@@ -121,6 +127,8 @@
 									</div>
 								</div>
 							</div>
+					
+							
 						</li>
 						<!-- /Cart -->
 
@@ -130,6 +138,9 @@
 						</li>
 						<!-- / Mobile nav toggle -->
 					</ul>
+											
+													
+						
 				</div>
 			</div>
 			<!-- header -->

@@ -20,7 +20,7 @@ namespace clicker.webui.Models
         public string Url { get; set; }
 
         [Required]
-        [Range(2,2000,ErrorMessage="2-2000 arasi girmelisiniz")]
+        [Range(2,10000,ErrorMessage="2-10000 arasi girmelisiniz")]
         public decimal? Price { get; set; }
 
         [Required]

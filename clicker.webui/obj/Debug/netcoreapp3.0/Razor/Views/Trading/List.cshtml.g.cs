@@ -40,8 +40,15 @@ using clicker.webui.Identity;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "C:\Users\User\Desktop\myproject\clicker.webui\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"270588ff88ce2f9c1206256536e7cadd43f11bf1", @"/Views/Trading/List.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e9cfe523ef4524ce38d9bc8178d25ea7bb894de0", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2e1c69efd376f1830288135e579caa4485717bc9", @"/Views/_ViewImports.cshtml")]
     public class Views_Trading_List : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ProductListViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("/search"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -102,7 +109,7 @@ using clicker.webui.Identity;
   </div>
   <div class=""card-body"">
        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf15406", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf15596", async() => {
                 WriteLiteral("\r\n       <div class=\"form-group\">\r\n            <input name=\"search\" type=\"text\" class=\"form-control\" placeholder=\"Search\">\r\n       </div>\r\n      <button type=\"submit\" class=\"btn btn-danger btn-sm btn-block\">Axtar</button>\r\n\r\n\r\n      ");
             }
             );
@@ -236,7 +243,7 @@ using clicker.webui.Identity;
 		<span class=""text-uppercase"">Sort By:</span>
 		<select class=""input"">
 				");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf110744", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf110934", async() => {
                 WriteLiteral("Position");
             }
             );
@@ -252,7 +259,7 @@ using clicker.webui.Identity;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\t\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf111914", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf112104", async() => {
                 WriteLiteral("Price");
             }
             );
@@ -268,7 +275,7 @@ using clicker.webui.Identity;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\t\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf113081", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf113271", async() => {
                 WriteLiteral("Rating");
             }
             );
@@ -440,7 +447,7 @@ Write(await Html.PartialAsync("_product",product));
 		<span class=""text-uppercase"">Sort By:</span>
 		<select class=""input"">
 				");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf119711", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf119901", async() => {
                 WriteLiteral("Position");
             }
             );
@@ -456,7 +463,7 @@ Write(await Html.PartialAsync("_product",product));
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\t\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf120881", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf121071", async() => {
                 WriteLiteral("Price");
             }
             );
@@ -472,7 +479,7 @@ Write(await Html.PartialAsync("_product",product));
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\t\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf122048", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf122238", async() => {
                 WriteLiteral("Rating");
             }
             );
@@ -511,7 +518,7 @@ WriteAttributeValue(" ", 8632, Model.PageInfo.CurrentPage==i+1?"active":"", 8633
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf124422", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf124612", async() => {
 #nullable restore
 #line 317 "C:\Users\User\Desktop\myproject\clicker.webui\Views\Trading\List.cshtml"
                                                                 Write(i+1);
@@ -564,7 +571,7 @@ WriteAttributeValue(" ", 8828, Model.PageInfo.CurrentPage==i+1?"active":"", 8829
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">\r\n\t\t\t\t ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf126936", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "270588ff88ce2f9c1206256536e7cadd43f11bf127126", async() => {
 #nullable restore
 #line 325 "C:\Users\User\Desktop\myproject\clicker.webui\Views\Trading\List.cshtml"
                                                                                                Write(i);

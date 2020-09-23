@@ -69,11 +69,12 @@ namespace clicker.webui.Controllers
 
             var result = await _signInManager.PasswordSignInAsync(user, model.Password, true, false);
 
-            //  if (result.Succeeded)
-            //  {
-            //      return Redirect(model.ReturnUrl??"~/");
-
-            //  }
+             if (result.Succeeded)
+             {
+                 //return Redirect(model.ReturnUrl??"~/");
+                return RedirectToAction("Index","Home");
+              }
+           
             ModelState.AddModelError("", "Istifadeci adi ve yaxud parol yalnisdir");
 
             return View(model);
@@ -140,7 +141,7 @@ namespace clicker.webui.Controllers
             if (result.Succeeded)
             {
                 var osnc = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                var url = Url.Action("ConfirmEmail", "Account", new
+                var url = Url.Action("EmailConfirm", "Account", new
                 {
                     userId = user.Id,
                     token = osnc
@@ -161,7 +162,7 @@ namespace clicker.webui.Controllers
         }
 
 
-        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        public async Task<IActionResult> EmailConfirm(string userId, string token)
         {
             if (userId == null || token == null)
             {

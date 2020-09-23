@@ -9,6 +9,10 @@
         <meta name="author" content="" />
         <title>Dashboard - SB Admin</title>
         <link href="/startbootstrap-sb-admin-gh-pages/dist/css/styles.css" rel="stylesheet" />
+                 @RenderSection("Scripts",false) 
+                          @RenderSection("Cssss",false) 
+
+
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -49,12 +53,17 @@
                                 Mehsul Kontrol
                                  
                             </a>
-                             <a class="nav-link" href="/admin/categorylist">
+                             <a class="nav-link" href="/admin/userlist">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Mehsul Kategoriya Kontrol
+                                Istifadeci Siyahisi 
                                  
                             </a>
-                            <div class="sb-sidenav-menu-heading">Interface</div>
+                              <a class="nav-link" href="/admin/categorylist">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Mehsul Kategoriya 
+                                 
+                            </a>
+                            @* <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Layouts
@@ -102,10 +111,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Charts
                             </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a>
+                            <a class="nav-link" href="tables.html"> *@
+                                @* <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables *@
+                            @* </a> *@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
@@ -732,5 +741,6 @@
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
-</script></body>
+</script>
+</body>
 </html>

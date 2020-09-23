@@ -150,7 +150,7 @@
 							</div>
 						</li>
 						<li><a href="#">Sales</a></li>
-						<li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pages </a>
+						@* <li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pages </a>
 							<ul class="custom-menu">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="products.html">Products</a></li>
@@ -158,13 +158,23 @@
 								<li><a href="checkout.html">Checkout</a></li>
 							</ul>
 							
-						</li>
+						</li> *@
 
 						@if(User.IsInRole("admin"))
           {
 
 						<li><a href="/admin/productlist" class="dropdown default-dropdown" style="margin-left:30px;">AdminPanel</a></li>
 		  }
+             @if (User.Identity.IsAuthenticated)
+			 {
+				 <li>
+					 <a href="/account/logout" class="dropdown default-dropdown">Logout</a>
+
+				 </li>
+				 
+			 }
+		         
+
 					</ul>
 				</div>
 				<!-- menu nav -->

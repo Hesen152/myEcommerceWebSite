@@ -1,6 +1,13 @@
+using System.Diagnostics;
+using System.Net;
+using Microsoft.VisualBasic;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Reflection;
 using System.Xml.Schema;
+using clicker.webui.Extend;
 using System.IO;
 using System.Linq;
 using System.Diagnostics.Tracing;
@@ -172,6 +179,71 @@ namespace clicker.webui.Controllers
 
         }
 
+        
+
+        public async Task<IActionResult> EditRole(string id)
+        {
+            var role=await _roleManager.FindByIdAsync(id);
+             var members=new List<User>;
+             var nonmembers=new List<User>;
+
+             foreach (var user in _userManager.Users)
+             {
+              var list=  await _userManager.IsInRoleAsync(user,role.Name)?members:nonmembers;
+                list.Add(user);
+
+                
+                 
+             }
+
+               var model=new RoleDetails()
+               {
+                   Role=role,
+                   Members=members,
+                   NonMembers=nonmembers
+
+
+               }
+               retrun View(model)
+
+
+
+        }
+
+
+
+
+        public  IActionResult RoleEdit(RoleEditModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                foreach (var userId in model.IdsToAdd??new string[]{})
+                {
+                    var user=await _userManager.FindByIdAsync(userId);
+
+                    if (user!=null)
+                    {
+                        var result=await _userManager.AddToRoleAsync
+                        
+                    }
+                    
+                }
+                
+            }
+
+
+
+
+        }
+
+        
+
+
+
+
+
+
+
         [HttpGet]
         public IActionResult EditProduct(int? id)
         {
@@ -201,7 +273,7 @@ namespace clicker.webui.Controllers
                 IsHome = entity.IsHome,
                 SelectedCategories = entity.ProductCategories.Select(i => i.Category).ToList()
 
-
+ 
             };
 
             ViewBag.Categories = _categoryService.GetAll();
@@ -244,15 +316,30 @@ namespace clicker.webui.Controllers
                 }
 
 
-
-
-
-                if (_productService.Update(entity, categoryIds))
+                if (_productService.Update(entity,categoryIds))
                 {
+
+                    TempData.Put("message",new MessageExplanation(){
+                        Title="Guncellendi",
+                        Message="Mehsul Guncellendi",
+                         AlertType="warning"
+                    });
+
+
+
 
 
                     return RedirectToAction("ProductList");
                 }
+
+                TempData.Put("message",new MessageExplanation(){
+                  Title="Xeta",
+                  Message=_productService.ErrorMessage,
+                  AlertType="primary"
+                  
+                });
+
+                
 
 
 
@@ -261,6 +348,7 @@ namespace clicker.webui.Controllers
             ViewBag.Categories = _categoryService.GetAll();
             return View(model);
 
+        
         }
 
 
@@ -284,10 +372,15 @@ namespace clicker.webui.Controllers
        
 
         
-         
+          [HttpGet]
+        public IActionResult CreateProduct()
+        {
+            return View();
+        }
 
 
 
+        [HttpPost]
         public async Task<IActionResult> CreateProduct(ProductModel model, IFormFile file)
         {
             if (ModelState.IsValid)
@@ -299,47 +392,37 @@ namespace clicker.webui.Controllers
                     Url = model.Url,
                     Price = model.Price,
                     Description = model.Description,
-                     
-                    //  if (file!=null)
-                    //  {
-                    //         var extention = Path.GetExtension(file.FileName);
-                    // var randomName = string.Format($"{Guid.NewGuid()}{extention}");
-                         
-                    //  }
+                   
 
                 };
 
 
-                //   if (_productService.Create(entity))
-                //   {
-                //       TempData.Put("message",new MessageExplanation(){
-                //          Title="Elave Edildi!",
-                //          Message="Elave Olundu"
-
-
-                //       });
-
-                //       return RedirectToAction("ProductList");
-
-
-                //   }
-                //   TempData.Put("message",new  MessageExplanation(){
-
-                //   });
 
                 if (_productService.Create(entity))
                 {
+                    TempData.Put("message",new MessageExplanation(){
+                        Title="Mehsul Elave Olundu",
+                        Message="Mehsul Elave Olundu",
+                        AlertType="success"
+                    });
 
                     return RedirectToAction("ProductList");
 
+                
+                
+
+                
+
                 }
-                else
+                 TempData.Put("message", new MessageExplanation()
                 {
-
-                    return View(model);
-
-                }
-
+                    Title = "Error",
+                    Message = _productService.ErrorMessage,
+                    AlertType = "danger"
+                });
+                
+                return View(model);
+             
 
 
 

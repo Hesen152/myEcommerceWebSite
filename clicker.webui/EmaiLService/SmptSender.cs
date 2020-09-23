@@ -41,6 +41,9 @@ namespace clicker.webui.EmaiLService
 
            return cli.SendMailAsync(
                new MailMessage(this._userName,email,subject,messagehtml)
+               {
+                   IsBodyHtml=true
+               }
            );
         }
     }
