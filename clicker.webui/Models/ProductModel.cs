@@ -16,7 +16,9 @@ namespace clicker.webui.Models
 
         [Required(ErrorMessage="ImageUrl Mecburidir!")]
         public string ImageUrl { get; set; }
+
         [Required(ErrorMessage="Url Mecburidir!")]
+        
         public string Url { get; set; }
 
         [Required]

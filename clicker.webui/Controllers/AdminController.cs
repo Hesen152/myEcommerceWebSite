@@ -1,3 +1,14 @@
+using System.Reflection.PortableExecutable;
+using System.Net.Http.Headers;
+using System.Net.Http;
+using System.Runtime.CompilerServices;
+using System.IO.MemoryMappedFiles;
+using System.Buffers;
+using System.Linq.Expressions;
+using System.Net.WebSockets;
+using System.Net.Sockets;
+using System.Runtime.InteropServices;
+using Microsoft.VisualBasic.CompilerServices;
 using System.Diagnostics;
 using System.Net;
 using Microsoft.VisualBasic;
@@ -25,7 +36,7 @@ using Newtonsoft.Json;
 using Microsoft.AspNetCore.Identity;
 using clicker.webui.Identity;
 using Microsoft.AspNetCore.Authorization;
-
+using clicker.webui.Models;
 namespace clicker.webui.Controllers
 {
         
@@ -179,22 +190,56 @@ namespace clicker.webui.Controllers
 
         }
 
+
+        public IActionResult CreateRole ()
+        {
+            return View();
+        }
+
+        [HttpPost]
+
+        public  async Task<IActionResult> CreateRole(RoleModel model)
+        {
+            if (ModelState.IsValid)
+            {
+
+
+                var result= await _roleManager.CreateAsync(new IdentityRole(model.RoleName));
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("RoleList");
+                    
+                }
+
+                else
+                {
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError("",item.Description);
+                        
+                    }
+                }
+
+             
+       
+            }
+          return View();
+ }
         
 
-        public async Task<IActionResult> EditRole(string id)
+        [HttpGet]
+        public async Task<IActionResult> RoleEdit(string id)
         {
             var role=await _roleManager.FindByIdAsync(id);
-             var members=new List<User>;
-             var nonmembers=new List<User>;
+             var members= new List<User>();
+             var nonmembers= new List<User>();
 
              foreach (var user in _userManager.Users)
              {
               var list=  await _userManager.IsInRoleAsync(user,role.Name)?members:nonmembers;
                 list.Add(user);
-
-                
-                 
-             }
+                  }
 
                var model=new RoleDetails()
                {
@@ -203,8 +248,8 @@ namespace clicker.webui.Controllers
                    NonMembers=nonmembers
 
 
-               }
-               retrun View(model)
+               };
+               return View(model);
 
 
 
@@ -212,8 +257,8 @@ namespace clicker.webui.Controllers
 
 
 
-
-        public  IActionResult RoleEdit(RoleEditModel model)
+         [HttpPost]
+        public async  Task<IActionResult> RoleEdit(RoleEditModel model)
         {
             if (ModelState.IsValid)
             {
@@ -223,18 +268,69 @@ namespace clicker.webui.Controllers
 
                     if (user!=null)
                     {
-                        var result=await _userManager.AddToRoleAsync
+                        var result=await _userManager.AddToRoleAsync(user,model.RoleName);
+
+                        if (!result.Succeeded)
+                        {
+                            foreach (var error in result.Errors)
+                            {
+                                ModelState.AddModelError("",error.Description);
+                                
+                            }
+
+                            
+                        }
                         
                     }
                     
                 }
-                
+                foreach (var userId in model.IdsToDelete??new string[]{})
+                {
+                    var user=await _userManager.FindByIdAsync(userId);
+                    if (user!=null)
+                    {
+                        var result=await _userManager.RemoveFromRoleAsync(user,model.RoleName);
+
+                        if (!result.Succeeded)
+                        {
+                            foreach (var error in result.Errors)
+                            {
+                                ModelState.AddModelError("",error.Description);
+
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }
             }
 
-
+                return Redirect("/admin/role"+model.RoleId);
 
 
         }
+
+        public async Task<IActionResult> DeleteRole(string roleId)
+        {
+            var role=await _roleManager.FindByIdAsync(roleId);
+
+
+            var result=await _roleManager.DeleteAsync(role);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("RoleList");
+                
+            }
+
+            return View("RoleList");
+             
+            
+
+        }
+
 
         
 
@@ -282,7 +378,7 @@ namespace clicker.webui.Controllers
 
         }
         [HttpPost]
-        public async Task<IActionResult> EditProduct(ProductModel model, int[] categoryIds, IFormFile file)
+        public async Task<IActionResult> EditProduct(ProductModel model,int[] categoryIds, IFormFile file)
         {
 
             if (ModelState.IsValid)

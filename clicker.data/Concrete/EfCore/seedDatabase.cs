@@ -92,7 +92,7 @@ namespace clicker.data.Concrete.EfCore
     new ProductCategory(){Product=Products[11],Category=Categories[2]},
     new ProductCategory(){Product=Products[18],Category=Categories[1]},
     new ProductCategory(){Product=Products[16],Category=Categories[4]},
-       new ProductCategory(){Product=Products[13],Category=Categories[5]},
+     new ProductCategory(){Product=Products[13],Category=Categories[5]},
     new ProductCategory(){Product=Products[14],Category=Categories[3]}
     
    };

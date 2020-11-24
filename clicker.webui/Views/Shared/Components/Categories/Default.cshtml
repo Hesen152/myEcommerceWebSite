@@ -8,11 +8,11 @@
               <a asp-controller="Trading"
                      asp-action="List"
                    asp-route-category="@item.Url"
-             class="list-group-item list-group-item-action @(ViewBag.SelectedCategory==item.Url?"active":"")"              
+             class="list-group-item list-group-item-action @(ViewBag.SelectedCategory==item.Url?"active":"")"       
               >@item.Name</a>
                               </li>
 
-                        
+                        //@(ViewBag.SelectedCategory==item.Url?"active":"") 
                   @* <li><a href="#">@item.Name</a></li> *@
                         
                      }

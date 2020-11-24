@@ -1,3 +1,9 @@
+using System.Reflection.Emit;
+using System.Reflection;
+using System.Xml.Schema;
+using System;
+using System.Reflection.Metadata;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using clicker.webui.EmaiLService;
 using clicker.webui.Extend;
@@ -95,18 +101,99 @@ namespace clicker.webui.Controllers
         }
 
 
+         [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+
+        }
+
+        [HttpPost]
+        public   async Task<IActionResult> ForgotPassword(string Email)
+        {
+
+            if (string.IsNullOrEmpty(Email))
+            {
+                return View();
+                
+            }
+            var user= await _userManager.FindByEmailAsync(Email);
+
+            if (user==null)
+            {
+                return View();
+
+                
+            }
+            //generate token
+            var code= await _userManager.GeneratePasswordResetTokenAsync(user);
+             var url=Url.Action("ResetPassword","Account",
+             new{
+                 userId=user.Id,
+                 token=code
+
+             });
+
+
+             await _emailSender.SendEmailAsync(Email,"ResetPassword",$"Parolunuz Yenilemek ucun <a href='http://localhost:5000{url}'></a> klikleyin");
+            return View();
+
+               
 
 
 
+        }
+
+
+        public IActionResult ResetPassword(string userId,string token)
+        {
+            if (userId==null || token==null)
+            {
+                return RedirectToAction("Home","Index");
+                
+            }
+
+            var model=new PasswordResetModel{Token=token};
+
+            return View();
 
 
 
+        }
+
+         [HttpPost]
+
+         public async Task<IActionResult> ResetPassword(PasswordResetModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+
+                return View(model);
+                
+            }
+
+            var user=await _userManager.FindByEmailAsync(model.Email);
+            if (user==null)
+            {
+                return RedirectToAction("Home","Index");
+                
+            }
+
+            var result=await _userManager.ResetPasswordAsync(user,model.Token,model.Password);
+            if (result.Succeeded)
+            {
+                     return RedirectToAction("Login" ,"Account");
+                
+            }
+
+             return View(model);
+
+
+        }
 
 
 
-
-
-
+ 
 
 
 

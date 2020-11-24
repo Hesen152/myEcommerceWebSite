@@ -7,6 +7,7 @@ namespace clicker.webui.Identity
     {
        public   StoreContextIdentity(DbContextOptions<StoreContextIdentity> options):base(options)
         {
+            
         }
 
         

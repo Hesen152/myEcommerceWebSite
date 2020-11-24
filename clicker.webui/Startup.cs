@@ -80,6 +80,8 @@ namespace clicker.webui
             services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IProductService, ProductManager>();
+            services.AddScoped<ICartRepository,EfCoreCartRepository>();
+            services.AddScoped<ICartService,CartManager>();
             services.AddScoped<IEmail,SmptSender>(i=>
             new SmptSender(
               _configuration["EmailSender:Host"],
@@ -131,7 +133,34 @@ namespace clicker.webui
                 //   pattern: "account/register",
                 //   defaults: new { controller = "Account", action = "Register" }
                 // );
+
+                    endpoints.MapControllerRoute(
+                  name: "cart",
+                  pattern: "cart",
+                  defaults: new { controller = "Cart", action = "Index" }
+                );
                 
+             
+                    endpoints.MapControllerRoute(
+                  name: "arminroles",
+                  pattern: "admin/role/list",
+                  defaults: new { controller = "Admin", action = "RoleList" }
+                );
+                
+                    endpoints.MapControllerRoute(
+                  name: "adminrolecreate",
+                  pattern: "admin/role/create",
+                  defaults: new { controller = "Admin", action = "CreateRole" }
+                );
+
+                  
+                    endpoints.MapControllerRoute(
+                  name: "adminroleedit",
+                  pattern: "admin/role/{id?}",
+                  defaults: new { controller = "Admin", action = "RoleEdit" }
+                );
+
+                //categories path
               
                     endpoints.MapControllerRoute(
                   name: "adminall",
@@ -139,6 +168,22 @@ namespace clicker.webui
                   defaults: new { controller = "Admin", action = "CreateCategory" }
                 );
                 
+
+
+
+                //producs path
+
+
+                 endpoints.MapControllerRoute(
+                 name:"adminproducts",
+                 pattern:"admin/products",
+                  defaults:new {controller="Admin",action="ProductList"}
+                 );
+                 
+
+
+
+
                 endpoints.MapControllerRoute(
                   name: "adminall",
                   pattern: "admin/products/create",

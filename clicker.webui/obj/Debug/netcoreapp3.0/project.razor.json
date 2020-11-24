@@ -10232,6 +10232,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\RoleList.cshtml",
+      "TargetPath": "Views\\Admin\\RoleList.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_LayoutAdmin.cshtml",
       "TargetPath": "Views\\Shared\\_LayoutAdmin.cshtml",
       "FileKind": "mvc"
@@ -10239,6 +10244,11 @@
     {
       "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_product.cshtml",
       "TargetPath": "Views\\Shared\\_product.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\CreateRole.cshtml",
+      "TargetPath": "Views\\Admin\\CreateRole.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -10254,6 +10264,11 @@
     {
       "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_section1.cshtml",
       "TargetPath": "Views\\Shared\\_section1.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Cart\\Index.cshtml",
+      "TargetPath": "Views\\Cart\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -10294,6 +10309,11 @@
     {
       "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Shared\\_menu-nav.cshtml",
       "TargetPath": "Views\\Shared\\_menu-nav.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\User\\Desktop\\myproject\\clicker.webui\\Views\\Admin\\RoleEdit.cshtml",
+      "TargetPath": "Views\\Admin\\RoleEdit.cshtml",
       "FileKind": "mvc"
     },
     {

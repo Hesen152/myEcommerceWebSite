@@ -9,8 +9,8 @@ using clicker.webui.Identity;
 namespace clicker.webui.Migrations
 {
     [DbContext(typeof(StoreContextIdentity))]
-    [Migration("20200920143912_IdentityMigrationn")]
-    partial class IdentityMigrationn
+    [Migration("20201002150437_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

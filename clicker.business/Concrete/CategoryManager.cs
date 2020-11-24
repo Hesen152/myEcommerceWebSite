@@ -50,7 +50,7 @@ namespace clicker.business.Concrete
 
         public void Update(Category entity)
         {
-            throw new System.NotImplementedException();
+           _categoryRepository.Update(entity);
         }
 
         public bool Valdiation(Category entity)

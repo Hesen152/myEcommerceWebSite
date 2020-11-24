@@ -112,3 +112,7 @@ C:\Users\User\Desktop\myproject\clicker.webui\obj\Debug\netcoreapp3.0\Razor\View
 C:\Users\User\Desktop\myproject\clicker.webui\obj\Debug\netcoreapp3.0\Razor\Views\Account\PasswordReset.cshtml.g.cs
 C:\Users\User\Desktop\myproject\clicker.webui\obj\Debug\netcoreapp3.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\User\Desktop\myproject\clicker.webui\obj\Debug\netcoreapp3.0\Razor\Views\Admin\UserList.cshtml.g.cs
+C:\Users\User\Desktop\myproject\clicker.webui\obj\Debug\netcoreapp3.0\Razor\Views\Admin\RoleList.cshtml.g.cs
+C:\Users\User\Desktop\myproject\clicker.webui\obj\Debug\netcoreapp3.0\Razor\Views\Admin\RoleEdit.cshtml.g.cs
+C:\Users\User\Desktop\myproject\clicker.webui\obj\Debug\netcoreapp3.0\Razor\Views\Admin\CreateRole.cshtml.g.cs
+C:\Users\User\Desktop\myproject\clicker.webui\obj\Debug\netcoreapp3.0\Razor\Views\Cart\Index.cshtml.g.cs

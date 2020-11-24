@@ -160,15 +160,19 @@
 							
 						</li> *@
 
-						@if(User.IsInRole("admin"))
-          {
+						 @if(User.IsInRole("admin"))
+          { 
 
 						<li><a href="/admin/productlist" class="dropdown default-dropdown" style="margin-left:30px;">AdminPanel</a></li>
-		  }
+		   } 
              @if (User.Identity.IsAuthenticated)
 			 {
 				 <li>
 					 <a href="/account/logout" class="dropdown default-dropdown">Logout</a>
+
+				 </li>
+				 <li>
+					 <a href="/cart" class="dropdown default-dropdown">Cart</a>
 
 				 </li>
 				 
