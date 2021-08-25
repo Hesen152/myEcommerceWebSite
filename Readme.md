@@ -20,5 +20,9 @@ the project respectively
 
 Database SqlLite 
 
+--Authentication  EmailService
+--Payment System
+
+
 
 
