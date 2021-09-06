@@ -1,5 +1,5 @@
 # myEcommerceWebSite 
- Repository Pattern And Solid Principles Written With Asp.Net Core As A Backend In The Project..
+ Repository Pattern And Solid Principles Written With Asp.Net Core As A Backend In The Project..=>Not completely professional
  
  ## Building a sample
 
