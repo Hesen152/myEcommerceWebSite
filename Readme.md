@@ -25,7 +25,7 @@ Database SqlLite
  Services:
 > Authentication EmailService 
 > 
-> Payment Service
+> Fake Payment Service
 
 
 
